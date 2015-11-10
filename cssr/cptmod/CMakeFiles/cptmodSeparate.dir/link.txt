@@ -1,0 +1,2 @@
+/usr/bin/ar cr libcptmodSeparate.a  CMakeFiles/cptmodSeparate.dir/cptmod_body_separate.c.o
+/usr/bin/ranlib libcptmodSeparate.a

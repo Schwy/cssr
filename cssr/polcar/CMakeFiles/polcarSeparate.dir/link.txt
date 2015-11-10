@@ -1,0 +1,2 @@
+/usr/bin/ar cr libpolcarSeparate.a  CMakeFiles/polcarSeparate.dir/polcar_body_separate.c.o
+/usr/bin/ranlib libpolcarSeparate.a

@@ -1,0 +1,14 @@
+process identite = {}
+(? real e ! real s)
+(
+	| temp := mul{2.0}(e)	% P(e)=P(temp) %
+	| s := mul{0.5}*temp	% P(temp)=P(s) %
+|)
+where
+	real temp;
+	process mul = {real PARAM} % P(Y)=P(X) %
+	(? real X ! real Y)
+	(|Y := X*PARAM|)	% P(Y)=P(X) %
+end
+% prendre une valeur : ' s := e'%
+% prendre une horloge : 's ^= e'%
