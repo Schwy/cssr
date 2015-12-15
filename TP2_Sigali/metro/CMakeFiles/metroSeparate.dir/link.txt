@@ -1,0 +1,2 @@
+/usr/bin/ar cr libmetroSeparate.a  CMakeFiles/metroSeparate.dir/metro_body_separate.c.o
+/usr/bin/ranlib libmetroSeparate.a

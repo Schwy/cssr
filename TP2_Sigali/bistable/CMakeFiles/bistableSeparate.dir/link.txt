@@ -1,0 +1,2 @@
+/usr/bin/ar cr libbistableSeparate.a  CMakeFiles/bistableSeparate.dir/bistable_body_separate.c.o
+/usr/bin/ranlib libbistableSeparate.a

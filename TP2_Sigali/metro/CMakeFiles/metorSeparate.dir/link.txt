@@ -1,0 +1,2 @@
+/usr/bin/ar cr libmetorSeparate.a  CMakeFiles/metorSeparate.dir/metor_body_separate.c.o
+/usr/bin/ranlib libmetorSeparate.a

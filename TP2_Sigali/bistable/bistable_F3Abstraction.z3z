@@ -1,0 +1,50 @@
+
+declare(
+        top,
+        states_1);
+
+
+
+CLK_top : top ^2;
+
+CLK_sortie : when top;
+
+zsortie : states_1 * CLK_sortie;
+
+sortie : not zsortie;
+
+CLK_fdp : when not zsortie default (when zsortie) when not sortie;
+
+fdp : (when zsortie) when not sortie default sortie when not zsortie;
+
+
+
+
+events: [
+        top];
+
+
+states: [
+        states_1];
+
+
+initialisations: [
+        states_1 = - 1];
+
+
+evolutions: [
+        sortie * CLK_sortie + (1 - CLK_sortie) * states_1];
+
+
+constraints: [
+        ];
+
+
+controllables: [
+        ];
+
+
+free_cond: [
+        ];
+
+

@@ -1,0 +1,88 @@
+
+declare(
+        MANU,
+        AUTO,
+        ARRET,
+        btn_auto,
+        btn_manu,
+        btn_exp,
+        CLK_21,
+        CLK_19,
+        CLK_24,
+        CLK_30,
+        CLK_MANU,
+        CLK_36,
+        CLK_38,
+        CLK_40,
+        CLK_44,
+        CLK_AUTO,
+        CLK_ARRET);
+
+
+
+CLK_btn_auto : btn_auto ^2;
+
+CLK_btn_manu : btn_manu ^2;
+
+CLK_btn_exp : btn_exp ^2;
+
+
+
+
+events: [
+        btn_auto,
+        btn_manu,
+        btn_exp,
+        CLK_21,
+        CLK_19,
+        CLK_24,
+        CLK_30,
+        CLK_MANU,
+        CLK_36,
+        CLK_38,
+        CLK_40,
+        CLK_44,
+        CLK_AUTO,
+        CLK_ARRET];
+
+
+states: [
+        MANU,
+        AUTO,
+        ARRET];
+
+
+initialisations: [
+        MANU = 1,
+        AUTO = - 1,
+        ARRET = - 1];
+
+
+evolutions: [
+        (not (when btn_exp) default CLK_21 ^2 default not (when btn_auto)) * CLK_30 ^2 + (1 - CLK_30 ^2) * MANU,
+        (not (when btn_exp) default CLK_38 ^2 default not (when btn_manu)) * CLK_44 ^2 + (1 - CLK_44 ^2) * AUTO,
+        (when btn_exp) + (1 - (when btn_exp)) * ARRET];
+
+
+constraints: [
+        CLK_19 ^2 = when AUTO,
+        CLK_21 ^2 = (when btn_manu) * CLK_19 ^2,
+        CLK_24 ^2 = when btn_exp default CLK_21 ^2,
+        CLK_30 ^2 = CLK_24 ^2 default when btn_auto,
+        CLK_MANU ^2 = CLK_30 ^2 default CLK_MANU ^2,
+        CLK_36 ^2 = when MANU,
+        CLK_38 ^2 = (when btn_auto) * CLK_36 ^2,
+        CLK_40 ^2 = when btn_exp default CLK_38 ^2,
+        CLK_44 ^2 = when btn_manu default CLK_40 ^2,
+        CLK_AUTO ^2 = CLK_44 ^2 default CLK_AUTO ^2,
+        CLK_ARRET ^2 = when btn_exp default CLK_ARRET ^2];
+
+
+controllables: [
+        ];
+
+
+free_cond: [
+        ];
+
+
