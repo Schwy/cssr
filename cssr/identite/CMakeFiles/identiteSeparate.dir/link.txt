@@ -1,0 +1,2 @@
+/usr/bin/ar cr libidentiteSeparate.a  CMakeFiles/identiteSeparate.dir/identite_body_separate.c.o
+/usr/bin/ranlib libidentiteSeparate.a

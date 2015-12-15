@@ -1,0 +1,18 @@
+% x = r*cos(a) %
+% y = r*sin(a) %
+process polcar = {}
+(? dreal r, a ! dreal x, y)
+(
+	| cosa := r*cos{}(a)	% P(x)=P(a)=P(r) %
+	| sina := r*sin{}(a)	% P(y)=P(a)=P(r) %
+	| x := r*cos{}(a)	% P(x)=P(a)=P(r) %
+	| y := r*sin{}(a)	% P(y)=P(a)=P(r) %
+|)
+where
+	real cosa, sina;
+	function cos = {} (? dreal a ! dreal kos) 	% P(Y)=P(X) %
+	; % Séparer les fonctions par un point-virgulelelele %
+	%
+	function sin = {} (? dreal a ! dreal syn) 	% P(Y)=P(X) %
+	
+end

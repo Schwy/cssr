@@ -1,0 +1,2 @@
+/usr/bin/ar cr libabsSeparate.a  CMakeFiles/absSeparate.dir/abs_body_separate.c.o
+/usr/bin/ranlib libabsSeparate.a

@@ -1,0 +1,2 @@
+/usr/bin/ar cr libmul2Separate.a  CMakeFiles/mul2Separate.dir/mul2_body_separate.c.o
+/usr/bin/ranlib libmul2Separate.a

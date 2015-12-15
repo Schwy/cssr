@@ -1,0 +1,7 @@
+ utiliser GIT (versionning)
+partager le travail
+refaire le makefile
+
+/!\ Materiel : pas d'ingé de sale
+
+/!\ pour charger module RTAI : connexion sur machine avec log RTAI
